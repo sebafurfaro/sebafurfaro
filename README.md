@@ -29,3 +29,4 @@ Para el desafío **CATÁLOGO CON MAPS Y PROMISE** se arma una API con productos 
 [API testing](https://mocki.io/v1/9352f289-882b-4ee8-bbb4-38f7f0cdfd3a)
 
 ***
+![GIF recorrido](https://github.com/sebafurfaro/sebafurfaro/blob/master/coderhouse-gif.gif)
