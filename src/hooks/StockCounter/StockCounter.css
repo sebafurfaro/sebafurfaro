@@ -1,0 +1,21 @@
+.StockCounter {
+    width: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:1rem;
+    border: 1px solid #424242;
+    border-radius: 7rem;
+    padding: .375rem .75rem;
+    min-height: 42px;
+}
+.StockCounter .stockButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none !important;
+    padding: 5px;
+    cursor: pointer;
+}
+

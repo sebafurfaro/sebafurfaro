@@ -1,0 +1,22 @@
+.AddToCart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #56cfe1;
+    border: none;
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    min-height: 42px;
+    width: 175px;
+    border-radius: 7rem;
+    transition:all .4s ease-in-out;
+}
+.AddToCart:hover {
+    background-color: #2a8bc4;
+    color:#ffffff;
+    text-decoration: none;
+}
