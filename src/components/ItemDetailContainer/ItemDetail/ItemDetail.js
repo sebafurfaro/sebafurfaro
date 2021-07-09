@@ -1,22 +1,23 @@
 import React from 'react';
 import './ItemDetail.css';
 import StockCounter from './../../../hooks/StockCounter/StockCounter';
-import AddCart from './../../../hooks/AddCart/AddCart';
+import { useCartContext } from '../../../context/CartContext';
 
-const ItemDetail = ({id, title, description, price, category, pictureUrl}) => {
+const ItemDetail = ({product}) => {
+    const {addToCart} = useCartContext();
+    const onAdd = qty => addToCart(product, qty);
     return (
-        <div className="item-detail" key={id}>
-            <img src={pictureUrl} alt={title} className="img-fluid" />
+        <div className="item-detail" key={product.id}>
+            <img src={product.pictureUrl} alt={product.title} className="img-fluid" />
             <div className="item-detail_content">
-                <h1>{title}</h1>
-                <p className="description">{description}</p>
-                <h3 className="price">{price}</h3>
+                <h1>{product.title}</h1>
+                <p className="description">{product.description}</p>
+                <h3 className="price">{product.price}</h3>
                 <div className="meta-shop">
-                    <StockCounter inStock="5" />
-                    <AddCart />
+                    {product.stock > 0 && <StockCounter onAdd={onAdd} stock={product.stock} />}
                 </div>
                 <div className="meta-category">
-                    <p>Categoria: {category}</p>
+                    <p>Categoria: {product.category}</p>
                 </div>
             </div>
         </div>  

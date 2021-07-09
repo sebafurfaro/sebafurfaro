@@ -1,0 +1,83 @@
+[
+    {
+       "id":1,
+       "title":"iPhone SE",
+       "price":"$96.000",
+       "category":"mobile",
+       "description":"El Apple iPhone SE (2nd Generation) cuenta con el sistema operativo iOS 13 que introduce nuevas formas de proteger tu seguridad y privacidad, como el sistema encriptado punto a punto con el cual podrás tener el control total de tus datos. Además, incorpora el modo oscuro para que descanses tu vista, poderosas herramientas de edición multimedia y aplicaciones de realidad aumentada.",
+       "pictureUrl":"https://i.ibb.co/CtQBmK5/iphone-se.jpg",
+       "stock": 20
+    },
+    {
+       "id":2,
+       "title":"Macbook Air A1466",
+       "price":"$155.000",
+       "category":"equipo",
+       "description":"La notebook Apple MacBook Air A1466 es una solución tanto para trabajar y estudiar como para entretenerte. Al ser portátil, el escritorio dejará de ser tu único espacio de uso para abrirte las puertas a otros ambientes ya sea en tu casa o en la oficina.",
+       "pictureUrl":"https://i.ibb.co/Hd466q4/macbook.jpg",
+       "stock": 10
+    },
+    {
+       "id":3,
+       "title":"iPad 10.2",
+       "price":"$73.190",
+       "category":"mobile",
+       "description":"El nuevo iPad se transforma en lo que quieras: un cuaderno digital, una oficina móvil, un estudio fotográfico, una consola de juegos o una sala de cine. El chip A12 Bionic te ofrece la potencia que necesitas para usar las apps de todos los días y los juegos más inmersivos. Puedes editar un documento mientras buscas información en Internet y hablas con un compañero por FaceTime. Gracias al Apple Pencil, tomar notas en el iPad es supersencillo. ¿Tienes que preparar un informe? Conecta el Smart Keyboard de tamaño completo y escribe con total comodidad",
+       "pictureUrl":"https://i.ibb.co/PxF2JM2/ipad.jpg",
+       "stock": 22
+    },
+    {
+       "id":4,
+       "title":"AirPods",
+       "price":"$22.000",
+       "category":"periferico",
+       "description":"Los AirPods te brindan una experiencia inalámbrica inigualable con un sonido de alta calidad, acceso a Siri (1) activado por voz y un estuche de carga que te ofrece más de 24 horas de reproducción de audio (2). Simplemente sácalos del estuche y estarán listos para funcionar con todos tus dispositivos (3). Póntelos y se conectarán al instante para que disfrutes un sonido rico en matices y de alta calidad. Pura magia",
+       "pictureUrl":"https://i.ibb.co/rH1skNb/airpods.jpg",
+       "stock": 20
+    },
+    {
+       "id":5,
+       "title":"iPhone 12 Pro Max",
+       "price":"$279.000",
+       "category":"equipo",
+       "description":"El iPhone 12 Pro Max tiene una pantalla Super Retina XDR más grande, de 6.7 pulgadas (1). Con el nuevo Ceramic Shield, es cuatro veces más resistente a las caídas (2). Y te permite tomar fotos increíbles con poca luz gracias al mejor sistema de cámaras Pro de un iPhone y al rango de zoom óptico de 5x. También puedes grabar, editar y reproducir video en Dolby Vision con calidad cinematográfica, tomar retratos con modo Noche y disfrutar experiencias de realidad aumentada de última generación con el escáner LiDAR. El iPhone 12 Pro Max viene con el potente chip A14 Bionic y es compatible con los nuevos accesorios MagSafe, que se adhieren magnéticamente a tu iPhone y brindan una carga inalámbrica más rápida (3). Una infinidad de posibilidades que no dejarán de sorprenderte.",
+       "pictureUrl":"https://i.ibb.co/Jc2ZncL/iphone12.jpg",
+       "stock": 5
+    },
+    {
+       "id":6,
+       "title":"Apple Watch SE",
+       "price":"$55.700",
+       "category":"equipo",
+       "description":"El Apple Watch SE tiene el mismo tamaño de pantalla que el Apple Watch Series 6 para que veas más información de un solo vistazo. También incluye sensores avanzados para que lleves un registro de tus objetivos de fitness y entrenamiento, e increíbles funcionalidades de salud y seguridad. La app Sueño te permite establecer una rutina para dormir y llevar un registro de tus hábitos de sueño. Y además, puedes recibir llamadas, mandar mensajes y escuchar música directamente desde tu muñeca. Apple Watch SE. Es mucho más que un reloj y está más a tu alcance.",
+       "pictureUrl":"https://i.ibb.co/F6DVkQW/watch.jpg",
+       "stock": 12
+    },
+    {
+       "id":7,
+       "title":"Apple Magic Mouse 2",
+       "price":"$13.000",
+       "category":"periferico",
+       "description":"El Magic Mouse 2 es totalmente recargable para que no tengas que usar las baterías tradicionales. Es más liviano, tiene menos piezas gracias a la batería integrada y a su base uniforme, y la parte inferior ha sido optimizada, por eso se mueve por tu escritorio con mayor fluidez y menos resistencia. Además, la superficie Multi-Touch te permite hacer gestos sencillos para pasar de una página web a otra y desplazarte por documentos. El Magic Mouse 2 está listo para usarse desde el primer día y se conecta a tu Mac de forma automática.",
+       "pictureUrl":"https://i.ibb.co/b70rxTb/mouse.jpg",
+       "stock": 9
+    },
+    {
+       "id":8,
+       "title":"Teclado Apple A1843 QWERTY",
+       "price":"$22.500",
+       "category":"periferico",
+       "description":"Este teclado Apple es el mejor complemento para hacer todo tipo de actividades en tu Mac, ya sea en tu trabajo o en la comodidad de tu hogar. Su diseño innovador y ultra delgado posibilita escribir con mayor rapidez y precisión.",
+       "pictureUrl":"https://i.ibb.co/Z82hyxF/teclado.jpg",
+       "stock": 5
+    },
+    {
+       "id":9,
+       "title":"iMac 27 con Retina Display",
+       "price":"$360.000",
+       "category":"equipo",
+       "description":"Pantalla: Retina 5K de 27 pulgadas (en diagonal), Resolución de 5.120 por 2.880, Tecnología True Tone, Gama cromática amplia (P3), Configurable con vidrio nanotexturizado",
+       "pictureUrl":"https://i.ibb.co/sbP1gXg/imac.jpg",
+       "stock": 9
+    }
+ ]

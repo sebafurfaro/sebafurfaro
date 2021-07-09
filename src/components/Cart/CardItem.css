@@ -1,0 +1,15 @@
+.itemCell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: .5rem auto;
+    padding: .75rem;
+    border: 1px solid #424242;
+}
+.itemCell h4 {
+    margin: 0;
+}
+.itemCell .quantity {
+    font-weight: bold;
+}

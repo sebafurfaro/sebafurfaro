@@ -28,7 +28,7 @@ const NavBar = () => {
             <option value="periferico">Perifericos</option>
           </select>
           <li className="nav-item">
-            <Link to="#" className="nav-link">
+            <Link to="/cart" className="nav-link">
               <CartWidget />
             </Link>
           </li>

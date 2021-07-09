@@ -12,7 +12,7 @@ const CategoryList = () => {
     useEffect(()=>{
         setTimeout(() => {
             (async()=>{
-                const {data} = await axios.get('https://mocki.io/v1/9324d06c-aede-4a4e-8b10-b8173cb81da1')
+                const {data} = await axios.get('https://mocki.io/v1/4acf7289-15dc-45bf-a8ef-7315814bd775')
                 if(!categoryName) return setItems(data);
                 const catItems = data.filter(item=> item.category === categoryName);
                 setItems(catItems);
