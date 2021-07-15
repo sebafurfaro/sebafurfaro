@@ -1,15 +1,15 @@
 import React from 'react';
 import ItemList from './ItemList/ItemList';
-import { useCartContext } from '../../context/CartContext';
+import { useCartContext } from '../../CartContext/CartContext';
 
 const ItemListContainer = ({ titleSection }) => {
-    const {database} = useCartContext();
-    console.log(database);
+    const {productos} = useCartContext();
+    console.log(productos);
 
     return (
         <div className="ItemListContainer">
-            <h1>{titleSection}</h1>
-         <ItemList items={database} />   
+            <h1 style={{margin: '2rem auto', textAlign: 'center'}}>{titleSection}</h1>
+         <ItemList items={productos} />   
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { useCartContext } from '../../context/CartContext';
+import { useCartContext } from '../../CartContext/CartContext';
 import { Button } from 'semantic-ui-react';
-import CardItem from './CartItem';
+import CardItem from './CartItem/CartItem';
 import './Cart.css'
 
 const Cart = () => {

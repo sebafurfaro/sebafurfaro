@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import ItemList from './../ItemListContainer/ItemList/ItemList';
 import Loader from './../Loader/Loader';
+import { useCartContext } from '../../CartContext/CartContext';
 
 const CategoryList = () => {
     const { categoryName } = useParams();
+    const { categorias } = useCartContext();
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     
     useEffect(()=>{
-        setTimeout(() => {
-            (async()=>{
-                const {data} = await axios.get('https://mocki.io/v1/4acf7289-15dc-45bf-a8ef-7315814bd775')
-                if(!categoryName) return setItems(data);
-                const catItems = data.filter(item=> item.category === categoryName);
-                setItems(catItems);
-                setLoading(false)
-            })();
-        }, 2000);
+        const foundCat = categorias.find(el => el.category === categoryName);
+        if(foundCat) {
+            setItems(foundCat)
+        } else {
+            setError(true)
+        }
+        setLoading(false);
     },[categoryName]);
 
-    if(loading) return <Loader />
+    if (error) return <h1>No se encontraron productos para la categoria seleccionada</h1>
+    
+    if(loading || !categoryName ) return <Loader />
 
     return (
         <div>

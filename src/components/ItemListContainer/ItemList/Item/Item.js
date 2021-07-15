@@ -6,7 +6,7 @@ import './Item.css';
 const Item = ({data}) => {
   return (
     <Card>
-      <img src={data.pictureUrl} alt={data.title} className="img-fluid" />
+      <img src={data.img} alt={data.title} className="img-fluid" />
       <Card.Content>
         <Card.Header>
           <Link to={`/item/${data.id}`}>

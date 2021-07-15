@@ -4,7 +4,6 @@
     justify-content: space-between;
     width: 300px;
     margin: .5rem auto;
-    padding: .75rem;
     border: 1px solid #424242;
 }
 .itemCell h4 {
@@ -12,4 +11,7 @@
 }
 .itemCell .quantity {
     font-weight: bold;
+}
+.d-none {
+    display:none;
 }

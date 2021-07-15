@@ -4,7 +4,7 @@ import ItemListContainer from './../../components/ItemListContainer/ItemListCont
 const Home = () => {
     return (
         <div className="container">
-            <ItemListContainer titleSection={"Item List Container"}/>
+            <ItemListContainer titleSection={"Todos los productos"}/>
         </div>
     )
 }

@@ -6,7 +6,7 @@ import NavBar from './components/Header/NavBar/NavBar';
 import Home from './views/Home/Home';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CategoryList from './components/CategoryList/CategoryList';
-import {CartProvider} from './context/CartContext';
+import {CartProvider} from './CartContext/CartContext';
 import Cart from './components/Cart/Cart';
 
 class App extends React.Component {

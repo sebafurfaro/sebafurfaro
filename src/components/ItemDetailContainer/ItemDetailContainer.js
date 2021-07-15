@@ -3,24 +3,24 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail/ItemDetail';
 import Loader from './../Loader/Loader';
 import ErrorItemNotFound from './../Error/ErrorItemNotFound';
-import { useCartContext } from '../../context/CartContext';
+import { useCartContext } from '../../CartContext/CartContext';
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
-    const {database} = useCartContext();
+    const { productos } = useCartContext();
     const [item, setItem] = useState();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
     useEffect(()=>{
-        const foundItem = database.find(el => el.id === +id);
+        const foundItem = productos.find(el => el.id === id);
         if(foundItem) {
             setItem(foundItem)
         } else {
             setError(true);
         }
         setLoading(false);
-    }, [id, database]);
+    }, [id, productos]);
 
     if(error) return <ErrorItemNotFound />
 

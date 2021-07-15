@@ -23,9 +23,13 @@ const NavBar = () => {
           </li>
           <select className="dropdown" onChange={handleChange}>
             <option value="">Seccionar categorias</option>
-            <option value="equipo">Notebook</option>
-            <option value="mobile">Celular/Tablet</option>
-            <option value="periferico">Perifericos</option>
+            <option value="Auriculares">Auriculares</option>
+            <option value="Celulares">Celulares</option>
+            <option value="Escritorio">Escritorio</option>
+            <option value="Notebook">Notebook</option>
+            <option value="Periféricos">Periféricos</option>
+            <option value="Relojes">Relojes</option>
+            <option value="Tablet">Tablet</option>
           </select>
           <li className="nav-item">
             <Link to="/cart" className="nav-link">
