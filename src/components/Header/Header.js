@@ -1,10 +1,10 @@
 import React from 'react';
 import Greeting from './Greeting/Greeting';
-import './Header.css';
+import './../../Sass/Header.scss';
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className="Header">
             <Greeting greeting="¡Bienvenidos!" />
         </div>
     )

@@ -12,17 +12,25 @@ export const CartProvider = ({ children }) => {
 
   const isInCart = (id) => cart.some((item) => item.id === id);
 
+  // adding products to cart
   const addToCart = (item, quantity) => {
     if (isInCart(item.id)) {
-      const newCart = cart.map((cartElement) => {
-        if (cartElement.id === item.id) {
-          return { ...cartElement, quantity: cartElement.quantity + quantity };
-        } else return cartElement;
+      const newCart = cart.map((cartE) => {
+        if (cartE.id === item.id) {
+          return { ...cartE, quantity: cartE.quantity + quantity };
+        } else return cartE;
       });
       setCart([newCart]);
     } else {
       setCart((prev) => [...prev, { ...item, quantity }]);
     }
+  };
+
+  // deleting products from cart
+  const delItemCart = (item) => {
+    if (isInCart(item.id)) {
+        
+    } 
   };
 
   const [productos, setProductos] = useState([]);
@@ -42,7 +50,7 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   return (
-    <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, productos}} >
+    <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, delItemCart, productos}} >
       {children}
     </CartContext.Provider>
   );

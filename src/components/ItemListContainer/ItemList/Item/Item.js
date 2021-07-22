@@ -1,26 +1,29 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
+import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 import { Link } from 'react-router-dom';
-import './Item.css';
 
-const Item = ({data}) => {
+
+const Item = ({ data }) => {
   return (
     <Card>
-      <img src={data.img} alt={data.title} className="img-fluid" />
-      <Card.Content>
-        <Card.Header>
-          <Link to={`/item/${data.id}`}>
+      <div className="categorySnap">{data.category}</div>
+      <div className="cardImgContent">
+        <CardImg top width="100%" src={data.img} alt={data.title}/>
+      </div>
+      <CardBody>
+        <div className="card-top">
+          <CardTitle tag="h4">
             {data.title}
-          </Link>
-        </Card.Header>
-        <Card.Meta>
-          <span className="date">{data.category}</span>
-          <span className="price">{data.price}</span>
-        </Card.Meta>
-        <Card.Description>
+          </CardTitle>
+          <CardSubtitle tag="h6" className="my-2">
+            <span className="price">AR$ {data.price}</span>
+          </CardSubtitle>
+        </div>
+        <CardText>
           {data.description}
-        </Card.Description>
-      </Card.Content>
+        </CardText>
+        <Link className="btn-card" to={`/item/${data.id}`}>Ver mas</Link>
+      </CardBody>
     </Card>
   );
 };

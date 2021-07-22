@@ -1,6 +1,12 @@
-import React from 'react';
-import { Icon } from 'semantic-ui-react';
+import React from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
-const CartWidget = () => <div className="cart-widget"><Icon name="shopping cart" /></div>
+const CartWidget = () => {
+  return (
+    <>
+      <FaShoppingCart />
+    </>
+  );
+};
 
 export default CartWidget;

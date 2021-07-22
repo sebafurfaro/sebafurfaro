@@ -1,9 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useCartContext } from '../../CartContext/CartContext';
-import { Button } from 'semantic-ui-react';
+import { Button, Table } from 'reactstrap';
 import CardItem from './CartItem/CartItem';
-import './Cart.css'
+import './../../Sass/Cart.scss';
 
 const Cart = () => {
     const { cart, clearCart } = useCartContext();
@@ -11,11 +11,28 @@ const Cart = () => {
     if(!cart.length) return <Redirect to="/" />;
 
     return (
-        <div className="cartResult">
-            {cart.map((item) => (
-                <CardItem carditem={item} />
-            ))}
-            <Button color='orange' onClick={clearCart}>Vaciar carrito</Button>
+        <div className="cartResult container">
+            <Table>
+                <thead>
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Precio xU</th>
+                        <th>Precio Total</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cart.map((item) => (
+                        <CardItem carditem={item} />
+                    ))}
+                </tbody>
+            </Table>
+            <div className="precioTotal d-flex align-items-center justify-content-between w-100">
+                <div className="label">Precio Total</div>
+                <div className="total">AR$</div>
+            </div>
+            <Button className="clearCart" onClick={clearCart}>Vaciar carrito</Button>
         </div>
     )
 }

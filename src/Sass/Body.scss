@@ -1,0 +1,17 @@
+@import './App.scss';
+.AppSebaFurfaro {
+    position: relative;
+    width: $w;
+    min-height:$vh;
+    margin: 0;
+    font-family: $fontBody;
+    background-color: $backColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    box-sizing: border-box;
+  }
+  .App {
+    text-align: center;
+  }

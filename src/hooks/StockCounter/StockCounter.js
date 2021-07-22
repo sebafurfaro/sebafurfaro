@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Icon } from 'semantic-ui-react';
-import "./StockCounter.css";
+import { Button } from 'reactstrap';
+import './StockCounter.scss';
 
 function StockCounter({ stock, onAdd }) {
   
@@ -8,16 +8,17 @@ function StockCounter({ stock, onAdd }) {
 
   return(
     <div className="StockCounter">
-      <div>
-        <button className="stockButton" type="button" onClick={ ()=> setToAdd(toAdd - 1 ? toAdd - 1 : toAdd) }>
-          <Icon name="minus" />
-        </button>
+      <div className="d-flex justify-content-between counter">
+        <Button className="stockButton" onClick={ ()=> setToAdd(toAdd - 1 ? toAdd - 1 : toAdd) }>
+          -
+        </Button>
         <div className="stock-number">{toAdd}</div>
-        <button className="stockButton" type="button" onClick={ ()=> setToAdd(toAdd === stock ? toAdd : toAdd +1) }>
-          <Icon name="plus" />
-        </button>
+        <Button className="stockButton" onClick={ ()=> setToAdd(toAdd === stock ? toAdd : toAdd +1) }>
+          +
+        </Button>
       </div>
-      <button type="button" className="cartButton" onClick={ ()=> onAdd(toAdd) }>Añadir al carrito</button>
+      <Button className="cartButton" onClick={ ()=> onAdd(toAdd) }>Añadir</Button>
+      
     </div>
   )
 }

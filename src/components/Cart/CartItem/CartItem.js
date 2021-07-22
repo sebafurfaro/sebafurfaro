@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
-import DeleteItem from '../../../hooks/DeleteItem/DeleteItem';
-import './CardItem.css';
+import React from 'react';
+import { FaTrash } from 'react-icons/fa';
+import { useCartContext } from '../../../CartContext/CartContext';
+import './../../../Sass/CartItem.scss'
 
 const CartItem = ({ carditem }) => {
-    const [isOut, setIsOut] = useState(false)
-    const delItem = () => {
-        setIsOut(!isOut)
-    }
+
+    const {delItemCart} = useCartContext;
+
     return (
-        <div className="itemCell">
-            <table className={isOut ? "d-none" : "d-flex"}>
-                <tr>
-                    <th>
-                        <h4>{carditem.title}</h4>
-                    </th>
-                    <th>
-                        <span className="quantity">Cant: {carditem.quantity}</span>
-                    </th>
-                    <th>
-                        <span className="totalPrice">${carditem.quantity * carditem.price}</span>
-                    </th>
-                    <th>
-                        <button type="button" onClick={delItem}>
-                            <DeleteItem />
-                        </button>
-                    </th>
-                </tr>
-            </table>
-        </div>
+        <tr>
+            <th className="text-center">{carditem.quantity}</th>
+            <th className="text-center">{carditem.title}</th>
+            <th className="text-center">AR$ {carditem.price}</th>
+            <th className="text-center">AR$ {carditem.quantity * carditem.price}</th>
+            <th className="text-center">
+                <button onClick={delItemCart} className="deteleItemCart"><FaTrash /></button>
+            </th>
+        </tr>
     )
 }
 

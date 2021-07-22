@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail/ItemDetail';
 import Loader from './../Loader/Loader';
 import ErrorItemNotFound from './../Error/ErrorItemNotFound';
 import { useCartContext } from '../../CartContext/CartContext';
+import ItemDetail from './ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
+
     const { id } = useParams();
     const { productos } = useCartContext();
     const [item, setItem] = useState();
@@ -14,6 +15,7 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
         const foundItem = productos.find(el => el.id === id);
+        
         if(foundItem) {
             setItem(foundItem)
         } else {
@@ -27,7 +29,7 @@ const ItemDetailContainer = () => {
     if (loading || !item) return <Loader />
 
     return (
-        <div>
+        <div className="container">
             <ItemDetail product={item}/>
         </div>
     )

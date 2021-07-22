@@ -1,0 +1,51 @@
+@import './App.scss';
+.cartResult {
+    margin-top: 3rem;
+    .table {
+        border:1px solid $primaryColor;
+        thead {
+            tr {
+                th {
+                    background-color: $thirdColor;
+                    color:$primaryColor;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .deteleItemCart {
+        border:none;
+        box-shadow:none;
+        color:$primaryColor;
+        background:red;
+        border-radius:4px; 
+        padding: 5px 10px;
+    }
+    .clearCart {
+        color: $thirdColor;
+        border-radius: 4px;
+        background: transparent;
+        border:1px solid transparent;
+        margin-top:1.5rem;
+        &:hover {
+            background-color:$thirdColor !important;
+            border-color:transparent;
+        }
+    }
+    .precioTotal {
+        margin: 3rem 5px;
+        border:1px solid $thirdColor;
+        .label {
+            width: 85%;
+            padding: 5px 10px;
+            background-color: $thirdColor;
+            color:$primaryColor;
+            font-weight: 600;
+        }
+        .total {
+            padding: 5px 10px;
+            color:$thirdColor;
+            font-weight: 600;
+        }
+    }
+}

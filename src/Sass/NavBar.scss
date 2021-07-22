@@ -1,0 +1,69 @@
+@import './App.scss';
+.navbar {
+    padding: .5rem 1.5rem;
+    width: 100%;
+    justify-content: space-between !important;
+    .navbar-brand {
+        max-width: 200px;
+        width: $w;
+        display: flex;
+        align-items: center;
+        .img-fluid {
+            width: 42px;
+            height: 42px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            padding-left: 10px;
+        }
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .nav-link {
+            color:$primaryColor !important;
+        }
+    }
+    .AddToCart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color:$primaryColor;
+            background-color: $secondaryColor;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7rem;
+            border:2px solid transparent;
+            margin-left: 1rem;
+            transition: all .4s ease;
+            &:hover {
+                border:2px solid $secondaryColor;
+                color:$secondaryColor;
+                background-color: transparent;
+            }
+        }
+    }
+    .dropdown {
+        color:$primaryColor;
+        background-color: transparent;
+        border: none;
+        option {
+            background-color:$backColor;
+            padding: 8px 16px;
+        }
+    }
+    
+}
+
+@media (min-width:990px) {
+    .navbar {
+        .navbar-collapse {
+            flex-grow: initial;
+        }
+    }
+}
