@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
           return { ...cartE, quantity: cartE.quantity + quantity };
         } else return cartE;
       });
-      setCart([newCart]);
+      setCart(newCart);
     } else {
       setCart((prev) => [...prev, { ...item, quantity }]);
     }
@@ -28,9 +28,8 @@ export const CartProvider = ({ children }) => {
 
   // deleting products from cart
   const delItemCart = (item) => {
-    if (isInCart(item.id)) {
-        
-    } 
+    const newCart = cart.filter((itemInCart) => item.id !== itemInCart.id);
+    setCart(newCart);
   };
 
   const [productos, setProductos] = useState([]);
@@ -50,7 +49,9 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   return (
-    <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, delItemCart, productos}} >
+    <CartContext.Provider
+      value={{ cart, setCart, clearCart, addToCart, delItemCart, productos }}
+    >
       {children}
     </CartContext.Provider>
   );

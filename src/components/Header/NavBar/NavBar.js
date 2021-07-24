@@ -18,10 +18,12 @@ const NavBar = () => {
   return (
     <>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/">
-            <img src={logo} alt="logo SebaFurfaro" className="img-fluid" />
-            <h1>SebaFurfaro</h1>
-        </NavbarBrand>
+        <Link to="/">
+          <NavbarBrand>
+              <img src={logo} alt="logo SebaFurfaro" className="img-fluid" />
+              <h1>SebaFurfaro</h1>
+          </NavbarBrand>
+        </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="w-100" navbar>
@@ -41,7 +43,7 @@ const NavBar = () => {
                 <option value="Relojes">Relojes</option>
                 <option value="Tablet">Tablet</option>
               </select>
-              <li className="nav-item">
+              <li className="nav-item AddToCart">
                 <Link to="/cart" className="nav-link">
                   <CartWidget />
                 </Link>

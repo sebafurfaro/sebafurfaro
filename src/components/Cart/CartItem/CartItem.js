@@ -5,8 +5,9 @@ import './../../../Sass/CartItem.scss'
 
 const CartItem = ({ carditem }) => {
 
-    const {delItemCart} = useCartContext;
-
+    const { delItemCart } = useCartContext();
+    
+   
     return (
         <tr>
             <th className="text-center">{carditem.quantity}</th>
@@ -14,7 +15,7 @@ const CartItem = ({ carditem }) => {
             <th className="text-center">AR$ {carditem.price}</th>
             <th className="text-center">AR$ {carditem.quantity * carditem.price}</th>
             <th className="text-center">
-                <button onClick={delItemCart} className="deteleItemCart"><FaTrash /></button>
+                <button onClick={() => delItemCart(carditem)} className="deteleItemCart"><FaTrash /></button>
             </th>
         </tr>
     )

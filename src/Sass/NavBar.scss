@@ -25,10 +25,16 @@
             color:$primaryColor !important;
         }
     }
+    .navbar-nav {
+        .nav-menu {
+            display: flex;
+        }
+    }
     .AddToCart {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 1rem;
         a {
             color:$primaryColor;
             background-color: $secondaryColor;
@@ -52,6 +58,9 @@
         color:$primaryColor;
         background-color: transparent;
         border: none;
+        &:focus {
+            outline: 0;
+        }
         option {
             background-color:$backColor;
             padding: 8px 16px;
