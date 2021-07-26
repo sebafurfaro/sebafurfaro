@@ -6,7 +6,7 @@ import CardItem from './CartItem/CartItem';
 import './../../Sass/Cart.scss';
 
 const Cart = () => {
-    const { cart, clearCart } = useCartContext();
+    const { cart, clearCart, cartTotal } = useCartContext();
 
     if(!cart.length) return <Redirect to="/" />;
 
@@ -30,7 +30,7 @@ const Cart = () => {
             </Table>
             <div className="precioTotal d-flex align-items-center justify-content-between w-100">
                 <div className="label">Precio Total</div>
-                <div className="total">AR$</div>
+                <div className="total">AR${cartTotal}</div>
             </div>
             <Button className="clearCart" onClick={clearCart}>Vaciar carrito</Button>
         </div>

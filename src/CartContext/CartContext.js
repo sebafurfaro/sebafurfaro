@@ -32,6 +32,13 @@ export const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
+  // show total price
+  const totalPrice = () => {
+    const newCart = cart.map((item) => item.price)
+  }
+    
+
+
   const [productos, setProductos] = useState([]);
 
   const getProductos = () => {
@@ -50,7 +57,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, setCart, clearCart, addToCart, delItemCart, productos }}
+      value={{ cart, setCart, clearCart, addToCart, delItemCart, totalPrice, productos }}
     >
       {children}
     </CartContext.Provider>
