@@ -34,11 +34,8 @@ export const CartProvider = ({ children }) => {
 
   // show total price
   const totalPrice = () => {
-    const newCart = cart.map((item) => item.price)
   }
     
-
-
   const [productos, setProductos] = useState([]);
 
   const getProductos = () => {

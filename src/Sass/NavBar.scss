@@ -15,6 +15,7 @@
         h1 {
             font-size: 1.8rem;
             padding-left: 10px;
+            text-decoration: none;
         }
     }
     .nav-item {
@@ -31,6 +32,7 @@
         }
     }
     .AddToCart {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -52,6 +54,21 @@
                 color:$secondaryColor;
                 background-color: transparent;
             }
+        }
+        .cartCount {
+            color:#084298;
+            padding:1rem;
+            border:1px solid #b6d4fe;
+            background: #cfe2ff;
+            width: 10px;
+            height:10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7rem;
+            position: absolute;
+            left:80%;
+            top:40%;
         }
     }
     .dropdown {

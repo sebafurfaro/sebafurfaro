@@ -4,16 +4,21 @@ import logo from "./../../../logo.svg";
 import CartWidget from "./../../CartWidget/CartWidget";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem} from 'reactstrap';
 import './../../../Sass/NavBar.scss';
+import { useCartContext } from "../../../CartContext/CartContext";
 
 const NavBar = () => {
 
+  const { cart } = useCartContext();
+  
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggle = () => setIsOpen(!isOpen);
-
+  
   const history = useHistory();
-
+  
   const handleChange = (e) => { e.target.value && history.push(`/category/${e.target.value}`); };
+  
+  const cartCount = cart.length;
 
   return (
     <>
@@ -35,18 +40,19 @@ const NavBar = () => {
               </li>
               <select className="dropdown" onChange={handleChange}>
                 <option value="">Seccionar categorias</option>
-                <option value="Auriculares">Auriculares</option>
-                <option value="Celulares">Celulares</option>
-                <option value="Escritorio">Escritorio</option>
-                <option value="Notebook">Notebook</option>
-                <option value="Periféricos">Periféricos</option>
-                <option value="Relojes">Relojes</option>
-                <option value="Tablet">Tablet</option>
+                <option value="/Auriculares">Auriculares</option>
+                <option value="/Celulares">Celulares</option>
+                <option value="/Escritorio">Escritorio</option>
+                <option value="/Notebook">Notebook</option>
+                <option value="/Periféricos">Periféricos</option>
+                <option value="/Relojes">Relojes</option>
+                <option value="/Tablet">Tablet</option>
               </select>
               <li className="nav-item AddToCart">
                 <Link to="/cart" className="nav-link">
                   <CartWidget />
                 </Link>
+                <div className={ cartCount > 0 ? 'cartCount' : 'invisible'}>{cartCount}</div>
               </li>
             </ul>
            </Nav>
