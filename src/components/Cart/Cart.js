@@ -6,10 +6,18 @@ import CardItem from './CartItem/CartItem';
 import './../../Sass/Cart.scss';
 
 const Cart = () => {
-    const { cart, clearCart, cartTotal } = useCartContext();
-
+    const { cart, clearCart, getTotalPrice } = useCartContext();
+    
+    console.log(getTotalPrice);
+    // show total price
+    //   const totalPrice = (item) => {
+    //     item.reduce((precioActual, item) => {
+    //       return item.price + precioActual
+    //     }, 0)
+    //   };
+    
     if(!cart.length) return <Redirect to="/" />;
-
+    
     return (
         <div className="cartResult container">
             <Table>
@@ -30,7 +38,7 @@ const Cart = () => {
             </Table>
             <div className="precioTotal d-flex align-items-center justify-content-between w-100">
                 <div className="label">Precio Total</div>
-                <div className="total">AR${cartTotal}</div>
+                <div className="total">AR$</div>
             </div>
             <Button className="clearCart" onClick={clearCart}>Vaciar carrito</Button>
         </div>

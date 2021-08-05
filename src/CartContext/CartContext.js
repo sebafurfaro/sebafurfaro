@@ -25,17 +25,13 @@ export const CartProvider = ({ children }) => {
       setCart((prev) => [...prev, { ...item, quantity }]);
     }
   };
-
+  
   // deleting products from cart
   const delItemCart = (item) => {
     const newCart = cart.filter((itemInCart) => item.id !== itemInCart.id);
     setCart(newCart);
-  };
-
-  // show total price
-  const totalPrice = () => {
-  }
-    
+  };  
+  
   const [productos, setProductos] = useState([]);
 
   const getProductos = () => {
@@ -51,10 +47,9 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     getProductos();
   }, []);
-
   return (
     <CartContext.Provider
-      value={{ cart, setCart, clearCart, addToCart, delItemCart, totalPrice, productos }}
+      value={{ cart, setCart, clearCart, addToCart, delItemCart, productos }}
     >
       {children}
     </CartContext.Provider>

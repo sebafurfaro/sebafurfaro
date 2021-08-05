@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Link, useHistory } from "react-router-dom";
 import logo from "./../../../logo.svg";
 import CartWidget from "./../../CartWidget/CartWidget";
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem} from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem} from 'reactstrap';
 import './../../../Sass/NavBar.scss';
 import { useCartContext } from "../../../CartContext/CartContext";
 
@@ -23,11 +23,9 @@ const NavBar = () => {
   return (
     <>
       <Navbar color="dark" dark expand="md">
-        <Link to="/">
-          <NavbarBrand>
+        <Link to="/" className="navbar-brand">
               <img src={logo} alt="logo SebaFurfaro" className="img-fluid" />
               <h1>SebaFurfaro</h1>
-          </NavbarBrand>
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
